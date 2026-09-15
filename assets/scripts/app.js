@@ -47,6 +47,8 @@ if (footer) {
 
 document.querySelectorAll('[data-year]').forEach(el => el.textContent = new Date().getFullYear());
 
+document.body.insertAdjacentHTML('beforeend', `<a class="mobile-quote" href="https://wa.me/528114982892?text=Hola%20AINSA%2C%20necesito%20cotizar%20material." target="_blank" rel="noopener" aria-label="Cotizar material por WhatsApp">Cotizar por WhatsApp</a>`);
+
 const menu = document.querySelector('.menu-toggle');
 menu?.addEventListener('click', () => {
   const open = document.body.classList.toggle('menu-open');
