@@ -65,11 +65,16 @@ document.querySelectorAll('[data-reveal]').forEach(el => observer.observe(el));
 const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
 if (!reduceMotion) {
   const layers = document.querySelectorAll('[data-parallax]');
+  const planes = document.querySelectorAll('[data-parallax-plane]');
   let ticking = false;
   const update = () => {
     layers.forEach(el => {
       const rect = el.getBoundingClientRect();
       if (rect.bottom > 0 && rect.top < innerHeight) el.style.transform = `translate3d(0, ${Math.round(rect.top * -.045)}px, 0) scale(1.06)`;
+    });
+    planes.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.bottom > 0 && rect.top < innerHeight) el.style.transform = `translate3d(0, ${Math.round(rect.top * -.018)}px, 0)`;
     });
     ticking = false;
   };
