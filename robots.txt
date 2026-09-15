@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /
+
+# Staging: habilitar indexación únicamente al migrar el dominio aprobado.
