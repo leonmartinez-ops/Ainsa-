@@ -18,3 +18,6 @@
 
 /* Product catalog icon system */
 .product-card-main{display:grid;grid-template-columns:76px minmax(0,1fr);gap:22px;align-items:center}.product-card-copy h2{margin:0 0 10px}.product-card-copy p{margin:0}.product-icon{width:68px;height:68px;fill:none;stroke:var(--orange);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}.product-card>a{align-self:flex-start}@media(max-width:780px){.product-card{min-height:255px;padding:26px}.product-card-main{grid-template-columns:64px minmax(0,1fr);gap:18px}.product-icon{width:58px;height:58px}.product-card-copy h2{font-size:1.65rem}}
+
+/* Identity-manual icon fidelity pass */
+.ainsa-manual-icon{fill:none!important;stroke:currentColor!important;stroke-width:2.6!important;stroke-linecap:round;stroke-linejoin:round}.product-icon.ainsa-manual-icon{color:var(--orange)}.material-card .ainsa-manual-icon,.value-list .ainsa-manual-icon{color:var(--orange)}
