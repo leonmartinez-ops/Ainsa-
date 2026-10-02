@@ -42,3 +42,11 @@ body.page-ready main,body.page-ready [data-site-footer]{opacity:0;transform:tran
 body.page-entered main,body.page-entered [data-site-footer]{opacity:1;transform:none;transition:opacity .78s cubic-bezier(.22,1,.36,1),transform .82s cubic-bezier(.22,1,.36,1)}
 body.page-leaving main{opacity:.86;transform:translateY(-2px);transition:opacity .42s ease,transform .55s cubic-bezier(.22,1,.36,1)}
 @media(max-width:780px){body::before{transition:transform .62s cubic-bezier(.22,1,.36,1),opacity .28s ease}body.page-ready main,body.page-ready [data-site-footer]{transform:translateY(3px)}body.page-leaving main{transform:none;opacity:.9}}
+
+
+/* Catalog cover refinement — straight, centered, editorial */
+.catalog-visual{display:grid;place-items:center}
+.catalog-line{inset:10%;transform:none}
+.catalog-book{left:50%;top:50%;height:76%;max-width:72%;object-fit:contain;object-position:center;transform:translate(-50%,-50%);transform-origin:center;box-shadow:0 28px 65px rgba(5,15,23,.34),0 7px 18px rgba(5,15,23,.22)}
+.catalog-visual:hover .catalog-book{transform:translate(-50%,-50%) scale(1.012)}
+@media(max-width:780px){.catalog-book{left:50%;top:50%;height:74%;max-width:78%;transform:translate(-50%,-50%)}.catalog-visual:hover .catalog-book{transform:translate(-50%,-50%)}}
