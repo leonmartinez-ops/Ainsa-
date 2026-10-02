@@ -98,3 +98,24 @@ filterButtons.forEach(button => button.addEventListener('click', () => {
   filterButtons.forEach(b => b.setAttribute('aria-pressed', String(b === button)));
   applyProductFilter();
 }));
+
+// Premium same-site page transitions
+(() => {
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  document.body.classList.add('page-ready');
+  requestAnimationFrame(() => requestAnimationFrame(() => document.body.classList.add('page-entered')));
+
+  document.addEventListener('click', (event) => {
+    const link = event.target.closest('a[href]');
+    if (!link || event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    if (link.target === '_blank' || link.hasAttribute('download')) return;
+    const url = new URL(link.href, location.href);
+    if (url.origin !== location.origin || url.protocol !== location.protocol) return;
+    if (url.pathname === location.pathname && url.search === location.search) return;
+    event.preventDefault();
+    document.body.classList.add('page-leaving');
+    setTimeout(() => { location.href = url.href; }, 360);
+  });
+
+  addEventListener('pageshow', () => document.body.classList.remove('page-leaving'));
+})();
