@@ -50,3 +50,11 @@ body.page-leaving main{opacity:.86;transform:translateY(-2px);transition:opacity
 .catalog-book{left:50%;top:50%;height:76%;max-width:72%;object-fit:contain;object-position:center;transform:translate(-50%,-50%);transform-origin:center;box-shadow:0 28px 65px rgba(5,15,23,.34),0 7px 18px rgba(5,15,23,.22)}
 .catalog-visual:hover .catalog-book{transform:translate(-50%,-50%) scale(1.012)}
 @media(max-width:780px){.catalog-book{left:50%;top:50%;height:74%;max-width:78%;transform:translate(-50%,-50%)}.catalog-visual:hover .catalog-book{transform:translate(-50%,-50%)}}
+
+
+/* Catalog cover — upright column composition, preserve artwork proportions */
+.catalog-visual{display:flex;align-items:center;justify-content:center;overflow:hidden}
+.catalog-book{position:relative!important;left:auto!important;top:auto!important;width:auto!important;height:auto!important;max-width:min(68%,560px)!important;max-height:82%!important;object-fit:contain!important;object-position:center!important;aspect-ratio:auto!important;transform:none!important;transform-origin:center!important;filter:none}
+.catalog-line{inset:8% 14%;transform:none!important}
+.catalog-visual:hover .catalog-book{transform:scale(1.015)!important}
+@media(max-width:780px){.catalog-book{max-width:72%!important;max-height:78%!important;width:auto!important;height:auto!important;transform:none!important}.catalog-visual:hover .catalog-book{transform:none!important}.catalog-line{inset:9% 12%}}
