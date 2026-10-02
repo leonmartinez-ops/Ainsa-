@@ -21,3 +21,14 @@
 
 /* Identity-manual icon fidelity pass */
 .ainsa-manual-icon{fill:none!important;stroke:currentColor!important;stroke-width:2.6!important;stroke-linecap:round;stroke-linejoin:round}.product-icon.ainsa-manual-icon{color:var(--orange)}.material-card .ainsa-manual-icon,.value-list .ainsa-manual-icon{color:var(--orange)}
+
+
+/* Premium inter-page transition — restrained, fast, mobile-safe */
+body::before{content:"";position:fixed;z-index:9998;inset:0;pointer-events:none;background:linear-gradient(118deg,var(--ink) 0%,#234a82 48%,var(--orange) 100%);transform:scaleY(0);transform-origin:bottom;transition:transform .52s cubic-bezier(.76,0,.24,1)}
+body.page-ready main,body.page-ready [data-site-footer]{opacity:0;transform:translateY(10px)}
+body.page-entered main,body.page-entered [data-site-footer]{opacity:1;transform:none;transition:opacity .58s ease,transform .7s cubic-bezier(.16,1,.3,1)}
+body.page-leaving::before{transform:scaleY(1);transform-origin:bottom}
+body.page-leaving main{opacity:.72;transform:translateY(-7px);transition:opacity .3s ease,transform .36s cubic-bezier(.4,0,1,1)}
+body.page-leaving .site-header{opacity:.88;transition:opacity .28s ease}
+@media(max-width:780px){body::before{transition-duration:.44s}body.page-ready main,body.page-ready [data-site-footer]{transform:translateY(7px)}body.page-leaving main{transform:translateY(-4px)}}
+@media(prefers-reduced-motion:reduce){body::before{display:none!important}body.page-ready main,body.page-ready [data-site-footer]{opacity:1!important;transform:none!important}}
