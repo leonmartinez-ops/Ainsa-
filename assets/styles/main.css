@@ -150,7 +150,7 @@ body.page-leaving main{opacity:.86;transform:translateY(-2px);transition:opacity
   content:"";
   position:absolute;
   inset:0;
-  background:rgba(8,18,24,.40);
+  background:rgba(8,18,24,.60);
   pointer-events:none;
 }
 .hero-content,.hero-progress{position:relative;z-index:4}
