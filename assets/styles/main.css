@@ -427,3 +427,23 @@ body.page-leaving main{opacity:.86;transform:translateY(-2px);transition:opacity
 
 /* Refine desktop hero left breathing room */
 @media(min-width:761px){.hero-content{left:100px!important;right:auto!important}}
+
+/* Header AINSA mark: 2x scale + product CTA gold */
+@media(min-width:761px){
+  .site-header .brand{
+    width:300px!important;
+    height:72px;
+    position:relative;
+    display:block;
+    flex:0 0 300px;
+  }
+  .site-header .brand img{opacity:0!important}
+  .site-header .brand::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(105deg,var(--orange),var(--gold));
+    -webkit-mask:url('../logos/ainsa-blanco.png') center/contain no-repeat;
+    mask:url('../logos/ainsa-blanco.png') center/contain no-repeat;
+  }
+}
