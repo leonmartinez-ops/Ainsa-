@@ -374,3 +374,8 @@ body.page-leaving main{opacity:.86;transform:translateY(-2px);transition:opacity
   background:linear-gradient(145deg,rgba(20,67,90,.82),rgba(10,45,63,.68))!important;
   mix-blend-mode:multiply!important;
 }
+
+/* Steel blue supplier contrast */
+.hero-logo-grid{background:rgba(127,177,199,.18)!important;border-color:rgba(174,218,237,.34)!important}
+.hero-logo-grid img{background:linear-gradient(145deg,rgba(112,159,180,.76),rgba(76,128,151,.68),rgba(48,101,126,.72))!important;border-color:rgba(190,226,241,.24)!important;box-shadow:inset 1px 1px 0 rgba(255,255,255,.20),inset -2px -3px 12px rgba(0,28,43,.14),0 4px 14px rgba(0,17,28,.12)!important;filter:drop-shadow(0 0 3px rgba(235,249,255,.34))!important}
+.hero-logo-grid img[alt="URREA"]{background:linear-gradient(145deg,rgba(112,159,180,.76),rgba(48,101,126,.72))!important;mix-blend-mode:multiply!important;filter:drop-shadow(0 0 3px rgba(235,249,255,.28))!important}
