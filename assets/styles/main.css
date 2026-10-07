@@ -415,3 +415,6 @@ body.page-leaving main{opacity:.86;transform:translateY(-2px);transition:opacity
 
 /* Raise centered pinned hero by 10vh */
 @media(min-width:761px){.hero-content{top:40%!important;bottom:auto!important;transform:translateY(-50%)!important}}
+
+/* Pin hero copy to explicit desktop top offset */
+@media(min-width:761px){.hero-content{top:275px!important;bottom:auto!important;transform:none!important}}
