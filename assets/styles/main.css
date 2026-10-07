@@ -123,3 +123,24 @@ body.page-leaving main{opacity:.86;transform:translateY(-2px);transition:opacity
 /* Hero slider image-path safety fix */
 .hero-slide{background-position:72% 48%;background-size:cover;background-repeat:no-repeat}
 .hero-slide:first-child{background-image:radial-gradient(circle at 79% 32%,rgba(254,177,97,.34),transparent 18%),url('../images/aceros.webp')!important}
+
+/* Hero slider: horizontal motion, no alpha fade */
+.hero{overflow:hidden}
+.hero-slide{
+  opacity:1!important;
+  transform:translate3d(100%,0,0)!important;
+  transition:transform .85s cubic-bezier(.65,0,.35,1)!important;
+  will-change:transform;
+  z-index:0
+}
+.hero-slide.is-active{
+  opacity:1!important;
+  transform:translate3d(0,0,0)!important;
+  z-index:1
+}
+.hero-slide.is-active~.hero-slide{transform:translate3d(100%,0,0)!important}
+.hero-slide:has(~ .hero-slide.is-active){transform:translate3d(-100%,0,0)!important}
+.hero-content,.hero-progress{z-index:3}
+@media(prefers-reduced-motion:reduce){
+  .hero-slide{transition:none!important}
+}
