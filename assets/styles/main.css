@@ -104,3 +104,8 @@ body.page-leaving main{opacity:.86;transform:translateY(-2px);transition:opacity
 .provider-slide{padding:18px 20px}
 .provider-slide img{width:150%;height:150%;max-width:150%;max-height:150%;object-fit:contain;transform:scale(1);transform-origin:center}
 @media(max-width:780px){.provider-slide{padding:10px 12px}.provider-slide img{width:150%;height:150%;max-width:150%;max-height:150%;object-fit:contain}}
+
+/* Supplier logo containment fix — keep larger presence without clipping */
+.provider-slide{overflow:hidden;padding:18px 22px}
+.provider-slide img{width:100%!important;height:100%!important;max-width:100%!important;max-height:100%!important;object-fit:contain!important;transform:scale(1.28);transform-origin:center}
+@media(max-width:780px){.provider-slide{padding:12px 16px}.provider-slide img{width:100%!important;height:100%!important;max-width:100%!important;max-height:100%!important;object-fit:contain!important;transform:scale(1.22)}}
