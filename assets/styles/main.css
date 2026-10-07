@@ -168,3 +168,44 @@ body.page-leaving main{opacity:.86;transform:translateY(-2px);transition:opacity
  .hero-logo-grid{width:92vw;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px 14px;transform:rotate(-2deg) scale(1.03)}
  .hero-logo-grid img{height:42px;max-width:105px}
 }
+
+/* Hero slide 02 refinement: right-aligned color logo field */
+.hero-logo-collage{
+  background:#bfc2c2!important;
+  align-items:center!important;
+  justify-content:flex-end!important;
+  padding:clamp(72px,8vw,110px) clamp(34px,5vw,72px) clamp(60px,7vw,90px) 52%!important;
+}
+.hero-logo-grid{
+  width:min(650px,46vw)!important;
+  grid-template-columns:repeat(4,minmax(0,1fr))!important;
+  gap:clamp(14px,1.6vw,24px) clamp(18px,2vw,30px)!important;
+  transform:none!important;
+}
+.hero-logo-grid img{
+  width:100%!important;
+  max-width:132px!important;
+  height:54px!important;
+  object-fit:contain!important;
+  filter:none!important;
+  opacity:1!important;
+  transform:none!important;
+}
+.hero-logo-collage::after{
+  background:linear-gradient(90deg,rgba(8,18,24,.68) 0%,rgba(8,18,24,.55) 38%,rgba(8,18,24,.16) 58%,rgba(8,18,24,.05) 100%)!important;
+}
+@media(max-width:760px){
+  .hero-logo-collage{
+    justify-content:flex-end!important;
+    padding:96px 14px 62px 47%!important;
+  }
+  .hero-logo-grid{
+    width:51vw!important;
+    grid-template-columns:repeat(3,minmax(0,1fr))!important;
+    gap:11px 9px!important;
+  }
+  .hero-logo-grid img{height:34px!important;max-width:82px!important}
+  .hero-logo-collage::after{
+    background:linear-gradient(90deg,rgba(8,18,24,.74) 0%,rgba(8,18,24,.62) 42%,rgba(8,18,24,.12) 64%,rgba(8,18,24,.04) 100%)!important;
+  }
+}
