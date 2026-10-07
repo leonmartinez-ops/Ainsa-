@@ -534,3 +534,8 @@ body.page-leaving main{opacity:.86;transform:translateY(-2px);transition:opacity
   .catalog-copy{transform:translate3d(0,var(--catalog-copy-parallax,0px),86px)!important}
   .catalog-motion{transform:translate3d(0,var(--catalog-motion-parallax,0px),-86px) scale(1.12)!important}
 }
+
+/* Join supplier logo band directly to blue solutions section */
+.provider-section{padding-bottom:0!important}
+.provider-marquee{margin-bottom:0!important}
+.provider-section + .catalog-feature{margin-top:0!important}
