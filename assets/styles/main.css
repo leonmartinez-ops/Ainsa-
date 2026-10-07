@@ -209,3 +209,14 @@ body.page-leaving main{opacity:.86;transform:translateY(-2px);transition:opacity
     background:linear-gradient(90deg,rgba(8,18,24,.74) 0%,rgba(8,18,24,.62) 42%,rgba(8,18,24,.12) 64%,rgba(8,18,24,.04) 100%)!important;
   }
 }
+
+/* Hero slide 02: blue field with original-color supplier logos */
+.hero-logo-collage{background:#17384b!important}
+.hero-logo-collage::after{
+  background:linear-gradient(90deg,rgba(7,22,31,.70) 0%,rgba(7,22,31,.50) 39%,rgba(7,22,31,.10) 60%,rgba(7,22,31,0) 100%)!important;
+}
+@media(max-width:760px){
+ .hero-logo-collage::after{
+   background:linear-gradient(90deg,rgba(7,22,31,.76) 0%,rgba(7,22,31,.56) 43%,rgba(7,22,31,.08) 66%,rgba(7,22,31,0) 100%)!important;
+ }
+}
