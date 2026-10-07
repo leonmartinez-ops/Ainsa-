@@ -539,3 +539,32 @@ body.page-leaving main{opacity:.86;transform:translateY(-2px);transition:opacity
 .provider-section{padding-bottom:0!important}
 .provider-marquee{margin-bottom:0!important}
 .provider-section + .catalog-feature{margin-top:0!important}
+
+/* Catalog feature: square AINSA industrial image replaces floating type */
+.catalog-image{
+  aspect-ratio:1/1!important;
+  width:min(460px,38vw)!important;
+  height:auto!important;
+  overflow:hidden!important;
+  position:relative!important;
+  opacity:1!important;
+  transform:none!important;
+}
+.catalog-image img{
+  width:100%!important;
+  height:100%!important;
+  display:block!important;
+  object-fit:cover!important;
+  object-position:center!important;
+  filter:saturate(.78) contrast(1.08) brightness(.82);
+}
+.catalog-image::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(145deg,rgba(12,48,67,.18),rgba(4,25,37,.34));
+  pointer-events:none;
+}
+@media(max-width:760px){
+  .catalog-image{width:min(82vw,420px)!important;margin-inline:auto!important}
+}
