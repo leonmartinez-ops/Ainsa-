@@ -316,3 +316,35 @@ body.page-leaving main{opacity:.86;transform:translateY(-2px);transition:opacity
  .hero-logo-grid img{height:70px!important;padding:8px 5px!important}
  .hero-logo-collage::before{width:90vw;height:90vw;right:-40vw;top:-15vw}
 }
+
+/* Hero slide 02: subtle industrial material atmosphere */
+.hero-logo-collage{
+  background:
+    linear-gradient(90deg,rgba(11,42,59,.94) 0%,rgba(17,56,75,.88) 45%,rgba(17,56,75,.78) 100%),
+    url('../images/aceros.webp') center/cover no-repeat!important;
+}
+.hero-logo-collage::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  width:auto!important;
+  height:auto!important;
+  right:0!important;
+  top:0!important;
+  border-radius:0!important;
+  background:
+    radial-gradient(circle at 82% 42%,rgba(104,207,255,.22) 0%,rgba(104,207,255,.08) 26%,rgba(104,207,255,0) 52%),
+    linear-gradient(115deg,rgba(255,255,255,.035),rgba(255,255,255,0) 38%)!important;
+  pointer-events:none;
+}
+.hero-logo-collage::after{
+  background:linear-gradient(90deg,rgba(5,21,30,.68) 0%,rgba(5,21,30,.42) 38%,rgba(5,21,30,.10) 62%,rgba(5,21,30,.03) 100%)!important;
+}
+.hero-logo-grid{position:relative!important;z-index:2!important}
+@media(max-width:760px){
+ .hero-logo-collage{
+   background:
+     linear-gradient(90deg,rgba(11,42,59,.95) 0%,rgba(17,56,75,.87) 48%,rgba(17,56,75,.78) 100%),
+     url('../images/aceros.webp') center/cover no-repeat!important;
+ }
+}
