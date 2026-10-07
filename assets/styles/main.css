@@ -489,3 +489,13 @@ body.page-leaving main{opacity:.86;transform:translateY(-2px);transition:opacity
 @media(min-width:761px){
   .site-header .brand{margin-left:-128px!important}
 }
+
+/* Three primary families on home */
+.materials-grid-primary{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:22px!important}
+.material-card-primary{min-height:430px!important}
+.material-card-primary img{height:100%!important;min-height:430px!important;object-fit:cover!important}
+.material-card-primary>div{min-height:100%;display:flex;flex-direction:column;justify-content:flex-end}
+.material-card-primary h3{font-size:clamp(30px,3vw,48px)!important}
+.material-card-primary p{max-width:28ch}
+.material-card-primary span{display:block;margin-top:14px;font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+@media(max-width:760px){.materials-grid-primary{grid-template-columns:1fr!important}.material-card-primary,.material-card-primary img{min-height:320px!important}}
