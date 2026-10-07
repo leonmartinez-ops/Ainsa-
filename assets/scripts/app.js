@@ -121,4 +121,37 @@ filterButtons.forEach(button => button.addEventListener('click', () => {
 })();
 
 // Home photographic hero slider
-(()=>{const hero=document.querySelector('[data-hero-slider]');if(!hero)return;const slides=[...hero.querySelectorAll('[data-hero-slide]')],dots=[...hero.querySelectorAll('[data-hero-dot]')];if(slides.length<2)return;let active=0,timer;const show=i=>{active=(i+slides.length)%slides.length;slides.forEach((s,n)=>s.classList.toggle('is-active',n===active));dots.forEach((d,n)=>{d.classList.toggle('is-active',n===active);d.setAttribute('aria-current',n===active?'true':'false')})};const start=()=>{if(reduceMotion)return;clearInterval(timer);timer=setInterval(()=>show(active+1),5200)};dots.forEach((d,i)=>d.addEventListener('click',()=>{show(i);start()}));hero.addEventListener('mouseenter',()=>clearInterval(timer));hero.addEventListener('mouseleave',start);show(0);start()})();
+(() => {
+  const hero = document.querySelector('[data-hero-slider]');
+  if (!hero) return;
+  const slides = Array.from(hero.querySelectorAll('[data-hero-slide]'));
+  const dots = Array.from(hero.querySelectorAll('[data-hero-dot]'));
+  if (slides.length < 2) return;
+  let active = 0;
+  let timer = null;
+  const show = (index) => {
+    active = (index + slides.length) % slides.length;
+    slides.forEach((slide, i) => slide.classList.toggle('is-active', i === active));
+    dots.forEach((dot, i) => {
+      dot.classList.toggle('is-active', i === active);
+      dot.setAttribute('aria-current', i === active ? 'true' : 'false');
+    });
+  };
+  const start = () => {
+    if (timer) clearInterval(timer);
+    timer = setInterval(() => show(active + 1), 4500);
+  };
+  dots.forEach((dot, i) => dot.addEventListener('click', () => {
+    show(i);
+    start();
+  }));
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+      if (timer) clearInterval(timer);
+    } else {
+      start();
+    }
+  });
+  show(0);
+  start();
+})();
