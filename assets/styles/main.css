@@ -362,3 +362,15 @@ body.page-leaving main{opacity:.86;transform:translateY(-2px);transition:opacity
   box-shadow:none!important;
   border-color:transparent!important;
 }
+
+/* Supplier tiles: AINSA blue modules instead of white cards */
+.hero-logo-grid{background:rgba(87,164,199,.18)!important;border-color:rgba(153,215,242,.30)!important}
+.hero-logo-grid img{
+  background:linear-gradient(145deg,rgba(20,67,90,.82),rgba(10,45,63,.68))!important;
+  border-color:rgba(142,211,242,.18)!important;
+  box-shadow:inset 1px 1px 0 rgba(255,255,255,.12),inset -2px -3px 10px rgba(0,19,30,.18),0 4px 12px rgba(0,16,26,.10)!important;
+}
+.hero-logo-grid img[alt="URREA"]{
+  background:linear-gradient(145deg,rgba(20,67,90,.82),rgba(10,45,63,.68))!important;
+  mix-blend-mode:multiply!important;
+}
