@@ -418,3 +418,6 @@ body.page-leaving main{opacity:.86;transform:translateY(-2px);transition:opacity
 
 /* Pin hero copy to explicit desktop top offset */
 @media(min-width:761px){.hero-content{top:275px!important;bottom:auto!important;transform:none!important}}
+
+/* Definitive desktop hero copy anchor: closer to header */
+@media(min-width:761px){.hero{position:sticky!important}.hero-content{position:absolute!important;top:140px!important;bottom:auto!important;transform:none!important;margin-top:0!important}}
