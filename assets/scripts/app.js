@@ -155,3 +155,32 @@ filterButtons.forEach(button => button.addEventListener('click', () => {
   show(0);
   start();
 })();
+
+// Subtle scroll depth for supplier marquee and catalog layers
+(() => {
+  if (window.matchMedia('(max-width: 760px)').matches || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const provider = document.querySelector('.provider-section');
+  const catalog = document.querySelector('.catalog-clean');
+  let ticking = false;
+  const renderDepth = () => {
+    const vh = window.innerHeight || 1;
+    if (provider) {
+      const r = provider.getBoundingClientRect();
+      const p = Math.max(-1, Math.min(1, (r.top + r.height * .5 - vh * .5) / vh));
+      provider.style.setProperty('--provider-parallax', (p * -26).toFixed(1) + 'px');
+    }
+    if (catalog) {
+      const r = catalog.getBoundingClientRect();
+      const p = Math.max(-1, Math.min(1, (r.top + r.height * .5 - vh * .5) / vh));
+      catalog.style.setProperty('--catalog-copy-parallax', (p * -12).toFixed(1) + 'px');
+      catalog.style.setProperty('--catalog-motion-parallax', (p * 30).toFixed(1) + 'px');
+    }
+    ticking = false;
+  };
+  const requestDepth = () => {
+    if (!ticking) { requestAnimationFrame(renderDepth); ticking = true; }
+  };
+  addEventListener('scroll', requestDepth, {passive:true});
+  addEventListener('resize', requestDepth);
+  renderDepth();
+})();
