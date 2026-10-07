@@ -154,3 +154,17 @@ body.page-leaving main{opacity:.86;transform:translateY(-2px);transition:opacity
   pointer-events:none;
 }
 .hero-content,.hero-progress{position:relative;z-index:4}
+
+/* Hero slide 02: official supplier-logo collage */
+.hero-logo-collage{background:#eef0ed!important;display:flex;align-items:center;justify-content:center;padding:clamp(70px,9vw,120px) clamp(24px,6vw,90px)}
+.hero-logo-grid{width:min(980px,76vw);display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:clamp(18px,2.4vw,36px);align-items:center;justify-items:center;transform:rotate(-3deg) scale(1.08)}
+.hero-logo-grid img{display:block;width:100%;max-width:150px;height:64px;object-fit:contain;filter:grayscale(1);opacity:.72}
+.hero-logo-grid img:nth-child(3n+1){transform:translateY(-10px) rotate(2deg)}
+.hero-logo-grid img:nth-child(3n+2){transform:translateY(8px) rotate(-2deg)}
+.hero-logo-grid img:nth-child(3n){transform:translateY(-2px) rotate(1deg)}
+.hero-logo-collage::after{background:rgba(8,18,24,.60)!important}
+@media(max-width:760px){
+ .hero-logo-collage{padding:88px 18px 64px}
+ .hero-logo-grid{width:92vw;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px 14px;transform:rotate(-2deg) scale(1.03)}
+ .hero-logo-grid img{height:42px;max-width:105px}
+}
