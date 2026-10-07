@@ -524,3 +524,13 @@ body.page-leaving main{opacity:.86;transform:translateY(-2px);transition:opacity
   .catalog-copy{transform:translate3d(0,var(--catalog-copy-parallax,0px),68px)!important;filter:drop-shadow(0 24px 34px rgba(0,0,0,.24))!important}
   .catalog-motion{transform:translate3d(0,var(--catalog-motion-parallax,0px),-62px) scale(1.085)!important;opacity:.76!important}
 }
+
+/* Pronounced scroll parallax: foreground stays anchored, rear planes travel */
+@media(min-width:761px){
+  .provider-section{padding-top:clamp(92px,9vw,150px)!important;padding-bottom:clamp(110px,11vw,180px)!important}
+  .provider-intro{transform:translateZ(82px)!important}
+  .provider-marquee{margin-top:34px!important;transform:translate3d(0,var(--provider-parallax,0px),-82px) scale(1.11)!important}
+  .catalog-clean{min-height:720px!important}
+  .catalog-copy{transform:translate3d(0,var(--catalog-copy-parallax,0px),86px)!important}
+  .catalog-motion{transform:translate3d(0,var(--catalog-motion-parallax,0px),-86px) scale(1.12)!important}
+}
