@@ -630,3 +630,25 @@ body.page-leaving main{opacity:.86;transform:translateY(-2px);transition:opacity
     justify-self:stretch!important;
   }
 }
+
+/* Parallax only on the image pixels; split geometry stays fixed */
+@media(min-width:761px){
+  .catalog-clean .catalog-image{
+    transform:none!important;
+    will-change:auto!important;
+  }
+  .catalog-clean .catalog-image img{
+    height:132%!important;
+    width:100%!important;
+    position:absolute!important;
+    left:0!important;
+    top:-16%!important;
+    object-fit:cover!important;
+    object-position:center!important;
+    transform:translate3d(0,var(--catalog-image-parallax,0px),0)!important;
+    will-change:transform!important;
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  .catalog-clean .catalog-image img{transform:none!important}
+}
