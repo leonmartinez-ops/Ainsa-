@@ -484,3 +484,8 @@ body.page-leaving main{opacity:.86;transform:translateY(-2px);transition:opacity
     margin-left:-28px!important;
   }
 }
+
+/* User-directed final brand shift: 100px further left */
+@media(min-width:761px){
+  .site-header .brand{margin-left:-128px!important}
+}
