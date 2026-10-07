@@ -173,7 +173,8 @@ filterButtons.forEach(button => button.addEventListener('click', () => {
       const r = catalog.getBoundingClientRect();
       const p = Math.max(-1, Math.min(1, (r.top + r.height * .5 - vh * .5) / vh));
       catalog.style.setProperty('--catalog-copy-parallax', (p * -18).toFixed(1) + 'px');
-      catalog.style.setProperty('--catalog-motion-parallax', (p * 118).toFixed(1) + 'px');
+      catalog.style.setProperty('--catalog-motion-parallax', '0px');
+      catalog.style.setProperty('--catalog-image-parallax', (p * 82).toFixed(1) + 'px');
     }
     ticking = false;
   };
