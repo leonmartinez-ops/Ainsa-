@@ -220,3 +220,36 @@ body.page-leaving main{opacity:.86;transform:translateY(-2px);transition:opacity
    background:linear-gradient(90deg,rgba(7,22,31,.76) 0%,rgba(7,22,31,.56) 43%,rgba(7,22,31,.08) 66%,rgba(7,22,31,0) 100%)!important;
  }
 }
+
+/* Hero slide 02: structured supplier tile grid */
+.hero-logo-grid{
+  width:min(700px,48vw)!important;
+  grid-template-columns:repeat(4,minmax(0,1fr))!important;
+  gap:1px!important;
+  background:rgba(255,255,255,.18)!important;
+  border:1px solid rgba(255,255,255,.18)!important;
+  border-radius:8px!important;
+  overflow:hidden!important;
+}
+.hero-logo-grid img{
+  box-sizing:border-box!important;
+  width:100%!important;
+  max-width:none!important;
+  height:86px!important;
+  padding:20px 16px!important;
+  object-fit:contain!important;
+  background:rgba(255,255,255,.94)!important;
+  filter:none!important;
+  opacity:1!important;
+  transform:none!important;
+}
+@media(max-width:760px){
+ .hero-logo-grid{
+   width:52vw!important;
+   grid-template-columns:repeat(3,minmax(0,1fr))!important;
+ }
+ .hero-logo-grid img{
+   height:58px!important;
+   padding:13px 9px!important;
+ }
+}
