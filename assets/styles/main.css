@@ -453,3 +453,15 @@ body.page-leaving main{opacity:.86;transform:translateY(-2px);transition:opacity
   .site-header{padding-left:100px!important}
   .site-header .brand{margin-left:0!important}
 }
+
+/* Explicit material imagery for hero slides 03–04 */
+.hero-slide.hero-photo-3{
+  background-image:radial-gradient(circle at 79% 32%,rgba(254,177,97,.34),transparent 18%),url('../images/tuberias.webp')!important;
+  background-position:72% 48%!important;
+  background-size:cover!important;
+}
+.hero-slide.hero-photo-4{
+  background-image:radial-gradient(circle at 79% 32%,rgba(254,177,97,.34),transparent 18%),url('../images/suministro.webp')!important;
+  background-position:72% 48%!important;
+  background-size:cover!important;
+}
