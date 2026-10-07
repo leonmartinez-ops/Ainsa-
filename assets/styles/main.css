@@ -424,3 +424,6 @@ body.page-leaving main{opacity:.86;transform:translateY(-2px);transition:opacity
 
 /* Give desktop hero copy more left breathing room */
 @media(min-width:761px){.hero-content{left:200px!important;right:auto!important}}
+
+/* Refine desktop hero left breathing room */
+@media(min-width:761px){.hero-content{left:100px!important;right:auto!important}}
