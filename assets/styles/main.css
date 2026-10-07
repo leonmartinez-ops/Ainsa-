@@ -477,3 +477,10 @@ body.page-leaving main{opacity:.86;transform:translateY(-2px);transition:opacity
 .hero-slide.hero-photo-4::after{
   background:rgba(5,14,21,.76)!important;
 }
+
+/* Optical brand alignment: visible AINSA mark shares hero headline axis */
+@media(min-width:761px){
+  .site-header .brand{
+    margin-left:-28px!important;
+  }
+}
