@@ -354,3 +354,11 @@ body.page-leaving main{opacity:.86;transform:translateY(-2px);transition:opacity
 .hero-logo-grid{background:rgba(210,238,249,.12)!important;border-color:rgba(195,231,248,.25)!important;box-shadow:0 28px 72px rgba(0,0,0,.24),0 0 54px rgba(77,191,246,.16)!important;backdrop-filter:blur(3px)!important;-webkit-backdrop-filter:blur(3px)!important}
 .hero-logo-grid img{background:linear-gradient(145deg,rgba(255,255,255,.76),rgba(225,240,247,.58))!important;border-color:rgba(210,238,249,.20)!important;box-shadow:inset 1px 1px 0 rgba(255,255,255,.62),inset -2px -3px 10px rgba(31,91,119,.08),0 4px 12px rgba(3,23,34,.08)!important}
 .hero-logo-collage::after{background:linear-gradient(90deg,rgba(5,21,30,.58) 0%,rgba(5,21,30,.32) 38%,rgba(5,21,30,.06) 62%,rgba(5,21,30,0) 100%)!important}
+
+/* Normalize URREA source artwork with baked-in white background */
+.hero-logo-grid img[alt="URREA"]{
+  mix-blend-mode:multiply!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  border-color:transparent!important;
+}
