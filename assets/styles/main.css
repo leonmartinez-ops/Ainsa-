@@ -447,3 +447,9 @@ body.page-leaving main{opacity:.86;transform:translateY(-2px);transition:opacity
     mask:url('../logos/ainsa-blanco.png') center/contain no-repeat;
   }
 }
+
+/* Align header brand axis with approved hero copy axis */
+@media(min-width:761px){
+  .site-header{padding-left:100px!important}
+  .site-header .brand{margin-left:0!important}
+}
