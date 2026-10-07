@@ -99,3 +99,8 @@ body.page-leaving main{opacity:.86;transform:translateY(-2px);transition:opacity
  .catalog-clean{grid-template-columns:1fr;min-height:0}.catalog-motion{min-height:220px;padding:20px;font-size:clamp(3.5rem,17vw,6rem);order:-1}
 }
 @media(prefers-reduced-motion:reduce){.provider-track,.catalog-motion span{animation:none!important}}
+
+/* Supplier logos +50% visual scale — client adjustment 2026-10-07 */
+.provider-slide{padding:18px 20px}
+.provider-slide img{width:150%;height:150%;max-width:150%;max-height:150%;object-fit:contain;transform:scale(1);transform-origin:center}
+@media(max-width:780px){.provider-slide{padding:10px 12px}.provider-slide img{width:150%;height:150%;max-width:150%;max-height:150%;object-fit:contain}}
