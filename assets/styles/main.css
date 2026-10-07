@@ -515,3 +515,12 @@ body.page-leaving main{opacity:.86;transform:translateY(-2px);transition:opacity
 @media(prefers-reduced-motion:reduce){
   .provider-marquee,.catalog-copy,.catalog-motion{transform:none!important}
 }
+
+/* Stronger layered parallax — same art direction, clearer depth */
+@media(min-width:761px){
+  .provider-intro{transform:translateZ(64px)!important;filter:drop-shadow(0 22px 28px rgba(8,30,42,.16))!important}
+  .provider-intro h2,.catalog-copy h2{text-shadow:0 3px 0 rgba(255,255,255,.30),0 20px 38px rgba(6,28,40,.24)!important}
+  .provider-marquee{transform:translate3d(0,var(--provider-parallax,0px),-58px) scale(1.075)!important;box-shadow:0 38px 70px rgba(5,24,34,.18),0 -24px 55px rgba(5,24,34,.12)!important}
+  .catalog-copy{transform:translate3d(0,var(--catalog-copy-parallax,0px),68px)!important;filter:drop-shadow(0 24px 34px rgba(0,0,0,.24))!important}
+  .catalog-motion{transform:translate3d(0,var(--catalog-motion-parallax,0px),-62px) scale(1.085)!important;opacity:.76!important}
+}
