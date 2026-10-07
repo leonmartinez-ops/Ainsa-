@@ -379,3 +379,26 @@ body.page-leaving main{opacity:.86;transform:translateY(-2px);transition:opacity
 .hero-logo-grid{background:rgba(127,177,199,.18)!important;border-color:rgba(174,218,237,.34)!important}
 .hero-logo-grid img{background:linear-gradient(145deg,rgba(112,159,180,.76),rgba(76,128,151,.68),rgba(48,101,126,.72))!important;border-color:rgba(190,226,241,.24)!important;box-shadow:inset 1px 1px 0 rgba(255,255,255,.20),inset -2px -3px 12px rgba(0,28,43,.14),0 4px 14px rgba(0,17,28,.12)!important;filter:drop-shadow(0 0 3px rgba(235,249,255,.34))!important}
 .hero-logo-grid img[alt="URREA"]{background:linear-gradient(145deg,rgba(112,159,180,.76),rgba(48,101,126,.72))!important;mix-blend-mode:multiply!important;filter:drop-shadow(0 0 3px rgba(235,249,255,.28))!important}
+
+/* Home hero pinned reveal: following content scrolls over the cover */
+@media(min-width:761px){
+  body{background:#f4f3ef}
+  main{position:relative}
+  .hero{
+    position:sticky!important;
+    top:0!important;
+    height:100vh!important;
+    min-height:100vh!important;
+    z-index:1!important;
+  }
+  .hero + section{
+    position:relative!important;
+    z-index:4!important;
+    box-shadow:0 -24px 60px rgba(5,21,30,.16);
+  }
+  .hero + section,
+  .hero + section ~ section{
+    position:relative;
+    z-index:4;
+  }
+}
