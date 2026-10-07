@@ -109,3 +109,10 @@ body.page-leaving main{opacity:.86;transform:translateY(-2px);transition:opacity
 .provider-slide{overflow:hidden;padding:18px 22px}
 .provider-slide img{width:100%!important;height:100%!important;max-width:100%!important;max-height:100%!important;object-fit:contain!important;transform:scale(1.28);transform-origin:center}
 @media(max-width:780px){.provider-slide{padding:12px 16px}.provider-slide img{width:100%!important;height:100%!important;max-width:100%!important;max-height:100%!important;object-fit:contain!important;transform:scale(1.22)}}
+
+/* Normalize supplier logo row — aligned, centered, uncropped */
+.provider-marquee{overflow:hidden}
+.provider-track{align-items:stretch}
+.provider-slide{box-sizing:border-box;display:flex!important;align-items:center!important;justify-content:center!important;width:clamp(230px,19vw,320px);height:190px!important;padding:30px 32px!important;overflow:hidden}
+.provider-slide img{display:block!important;width:100%!important;height:100%!important;max-width:100%!important;max-height:100%!important;object-fit:contain!important;object-position:center!important;transform:none!important;margin:auto!important}
+@media(max-width:780px){.provider-slide{width:180px;height:125px!important;padding:20px!important}.provider-slide img{transform:none!important}}
