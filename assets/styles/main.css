@@ -472,3 +472,8 @@ body.page-leaving main{opacity:.86;transform:translateY(-2px);transition:opacity
     linear-gradient(90deg,rgba(11,42,59,.82) 0%,rgba(17,56,75,.70) 45%,rgba(17,56,75,.58) 100%),
     url('../images/hero-industrial.webp') center/cover no-repeat!important;
 }
+
+/* Slide 04: deeper contrast for hero copy */
+.hero-slide.hero-photo-4::after{
+  background:rgba(5,14,21,.76)!important;
+}
