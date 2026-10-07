@@ -139,7 +139,7 @@ filterButtons.forEach(button => button.addEventListener('click', () => {
   };
   const start = () => {
     if (timer) clearInterval(timer);
-    timer = setInterval(() => show(active + 1), 4500);
+    timer = setInterval(() => show(active + 1), 5500);
   };
   dots.forEach((dot, i) => dot.addEventListener('click', () => {
     show(i);
