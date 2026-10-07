@@ -611,3 +611,22 @@ body.page-leaving main{opacity:.86;transform:translateY(-2px);transition:opacity
     margin:32px 0 0!important;
   }
 }
+
+/* Force solutions media flush to the physical right viewport edge */
+@media(min-width:761px){
+  .catalog-clean{
+    width:100vw!important;
+    max-width:none!important;
+    margin-left:calc(50% - 50vw)!important;
+    margin-right:calc(50% - 50vw)!important;
+    box-sizing:border-box!important;
+    overflow:hidden!important;
+  }
+  .catalog-clean .catalog-image{
+    width:100%!important;
+    max-width:none!important;
+    margin:0!important;
+    padding:0!important;
+    justify-self:stretch!important;
+  }
+}
