@@ -409,3 +409,6 @@ body.page-leaving main{opacity:.86;transform:translateY(-2px);transition:opacity
     transform:translateY(-9vh)!important;
   }
 }
+
+/* Center pinned hero content vertically */
+@media(min-width:761px){.hero-content{top:50%!important;bottom:auto!important;transform:translateY(-50%)!important}}
