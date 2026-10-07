@@ -119,3 +119,6 @@ filterButtons.forEach(button => button.addEventListener('click', () => {
 
   addEventListener('pageshow', () => document.body.classList.remove('page-leaving'));
 })();
+
+// Home photographic hero slider
+(()=>{const hero=document.querySelector('[data-hero-slider]');if(!hero)return;const slides=[...hero.querySelectorAll('[data-hero-slide]')],dots=[...hero.querySelectorAll('[data-hero-dot]')];if(slides.length<2)return;let active=0,timer;const show=i=>{active=(i+slides.length)%slides.length;slides.forEach((s,n)=>s.classList.toggle('is-active',n===active));dots.forEach((d,n)=>{d.classList.toggle('is-active',n===active);d.setAttribute('aria-current',n===active?'true':'false')})};const start=()=>{if(reduceMotion)return;clearInterval(timer);timer=setInterval(()=>show(active+1),5200)};dots.forEach((d,i)=>d.addEventListener('click',()=>{show(i);start()}));hero.addEventListener('mouseenter',()=>clearInterval(timer));hero.addEventListener('mouseleave',start);show(0);start()})();
