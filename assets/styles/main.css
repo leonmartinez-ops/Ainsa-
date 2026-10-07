@@ -465,3 +465,10 @@ body.page-leaving main{opacity:.86;transform:translateY(-2px);transition:opacity
   background-position:72% 48%!important;
   background-size:cover!important;
 }
+
+/* Slide 02: distinct AINSA industrial background behind supplier grid */
+.hero-logo-collage{
+  background:
+    linear-gradient(90deg,rgba(11,42,59,.82) 0%,rgba(17,56,75,.70) 45%,rgba(17,56,75,.58) 100%),
+    url('../images/hero-industrial.webp') center/cover no-repeat!important;
+}
