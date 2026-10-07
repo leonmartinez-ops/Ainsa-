@@ -167,13 +167,13 @@ filterButtons.forEach(button => button.addEventListener('click', () => {
     if (provider) {
       const r = provider.getBoundingClientRect();
       const p = Math.max(-1, Math.min(1, (r.top + r.height * .5 - vh * .5) / vh));
-      provider.style.setProperty('--provider-parallax', (p * -26).toFixed(1) + 'px');
+      provider.style.setProperty('--provider-parallax', (p * -54).toFixed(1) + 'px');
     }
     if (catalog) {
       const r = catalog.getBoundingClientRect();
       const p = Math.max(-1, Math.min(1, (r.top + r.height * .5 - vh * .5) / vh));
-      catalog.style.setProperty('--catalog-copy-parallax', (p * -12).toFixed(1) + 'px');
-      catalog.style.setProperty('--catalog-motion-parallax', (p * 30).toFixed(1) + 'px');
+      catalog.style.setProperty('--catalog-copy-parallax', (p * -24).toFixed(1) + 'px');
+      catalog.style.setProperty('--catalog-motion-parallax', (p * 62).toFixed(1) + 'px');
     }
     ticking = false;
   };
