@@ -652,3 +652,12 @@ body.page-leaving main{opacity:.86;transform:translateY(-2px);transition:opacity
 @media(prefers-reduced-motion:reduce){
   .catalog-clean .catalog-image img{transform:none!important}
 }
+
+
+/* Slider 02 — premium editorial brand wall (preview branch only) */
+.hero-logo-collage{background:linear-gradient(90deg,rgba(6,20,30,.92),rgba(12,36,52,.64) 62%,rgba(10,32,47,.5)),url('../images/hero-industrial.webp') center/cover no-repeat!important;filter:none!important}
+.hero-logo-collage::after{background:linear-gradient(90deg,rgba(5,16,25,.56),rgba(5,16,25,.1) 70%)!important}
+.hero-logo-grid{width:min(690px,47vw)!important;display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:20px 26px!important;padding:28px!important;border:0!important;border-radius:0!important;background:rgba(10,33,48,.28)!important;box-shadow:none!important;backdrop-filter:blur(9px)!important;overflow:visible!important;perspective:none!important}
+.hero-logo-grid img,.hero-logo-grid img[alt="URREA"]{width:100%!important;height:62px!important;max-width:100%!important;padding:12px!important;object-fit:contain!important;transform:none!important;opacity:1!important;filter:none!important;mix-blend-mode:normal!important;background:rgba(244,248,250,.94)!important;border:1px solid rgba(255,255,255,.25)!important;border-radius:2px!important;box-shadow:0 8px 24px rgba(0,0,0,.12)!important}
+.hero-logo-grid img:nth-child(17){grid-column:2 / span 2!important}
+@media(max-width:760px){.hero-logo-collage{padding:90px 14px 55px 43%!important}.hero-logo-grid{width:56vw!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:8px!important;padding:9px!important}.hero-logo-grid img,.hero-logo-grid img[alt="URREA"]{height:42px!important;padding:6px!important}.hero-logo-grid img:nth-child(17){grid-column:2!important}}
