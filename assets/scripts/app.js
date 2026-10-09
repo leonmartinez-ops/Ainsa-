@@ -38,7 +38,7 @@ if (footer) {
           <p>Materiales que impulsan grandes ideas.</p>
         </div>
         <div><h2>Navegación</h2><a href="${resolve('index.html')}">Inicio</a><a href="${resolve('nosotros/')}">Nosotros</a><a href="${resolve('productos/')}">Productos</a><a href="${resolve('catalogo/')}">Catálogo</a></div>
-        <div><h2>Contacto</h2><a href="tel:+528111687679">81 1168 7679</a><a href="tel:+528111687680">81 1168 7680</a><a href="tel:+528111687387">81 1168 7387</a><a href="tel:+528111689860">81 1689 860</a><a href="https://wa.me/528114982892" target="_blank" rel="noopener">WhatsApp: 81 1498 2892</a><a href="mailto:contacto@ainsa-mx.com">contacto@ainsa-mx.com</a></div>
+        <div><h2>Contacto</h2><a href="tel:+528111687679">81 1168 7679</a><a href="tel:+528111687680">81 1168 7680</a><a href="tel:+528111687387">81 1168 7387</a><a href="tel:+528111689860">8111 689860</a><a href="https://wa.me/528114982892" target="_blank" rel="noopener">WhatsApp: 81 1498 2892</a><a href="mailto:contacto@ainsa-mx.com">contacto@ainsa-mx.com</a></div>
         <div><h2>Dirección</h2><a href="https://maps.app.goo.gl/PdrwyqY3MYTCWKSQ9" target="_blank" rel="noopener">Altamisa No. 1001, Bodega 11<br>Barrio Estrella Norte y Sur<br>Monterrey, N.L. C.P. 64102</a></div>
       </div>
       <div class="footer-base shell"><span>© <span data-year></span> AINSA. Todos los derechos reservados.</span><span>Abastecedora Industrial Naher, S.A. de C.V.</span></div>
