@@ -652,3 +652,18 @@ body.page-leaving main{opacity:.86;transform:translateY(-2px);transition:opacity
 @media(prefers-reduced-motion:reduce){
   .catalog-clean .catalog-image img{transform:none!important}
 }
+
+
+/* AINSA approved header mark — gold logo, reliably visible and aligned */
+.site-header .brand::before{display:none!important}
+.site-header .brand img{opacity:1!important;display:block!important;filter:brightness(0) saturate(100%) invert(75%) sepia(53%) saturate(1116%) hue-rotate(331deg) brightness(104%) contrast(101%)!important;object-fit:contain!important;object-position:left center!important}
+@media(min-width:761px){
+ .site-header{padding-left:100px!important}
+ .site-header .brand{margin-left:0!important;width:300px!important;flex:0 0 300px!important;height:72px!important}
+ .site-header .brand img{width:100%!important;max-height:72px!important;height:72px!important}
+ .hero-content{left:100px!important}
+}
+@media(max-width:760px){
+ .site-header .brand{margin-left:0!important;width:128px!important;height:auto!important}
+ .site-header .brand img{width:100%!important;max-height:52px!important}
+}
