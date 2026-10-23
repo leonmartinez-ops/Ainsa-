@@ -185,3 +185,23 @@ filterButtons.forEach(button => button.addEventListener('click', () => {
   addEventListener('resize', requestDepth);
   renderDepth();
 })();
+
+// Keep existing bookmarked product links usable inside the area disclosures.
+(() => {
+  const revealLinkedProduct = () => {
+    if (!location.hash) return;
+    let id;
+    try { id = decodeURIComponent(location.hash.slice(1)); } catch { return; }
+    const target = document.getElementById(id);
+    if (!target) return;
+    let parent = target.parentElement;
+    let opened = false;
+    while (parent) {
+      if (parent.tagName === 'DETAILS' && !parent.open) { parent.open = true; opened = true; }
+      parent = parent.parentElement;
+    }
+    if (opened) requestAnimationFrame(() => target.scrollIntoView({block:'start', behavior:'instant'}));
+  };
+  addEventListener('hashchange', revealLinkedProduct);
+  revealLinkedProduct();
+})();
