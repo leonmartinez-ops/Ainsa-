@@ -1,2 +1,5 @@
 .DS_Store
 node_modules/
+
+/assets/catalogo/proveedores/steelpark.pdf
+/assets/catalogo/proveedores/abinox.ppsx

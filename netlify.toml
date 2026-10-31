@@ -1,4 +1,5 @@
 [build]
+  command = "node scripts/prepare-catalogs.mjs && npm run check"
   publish = "."
 
 [[headers]]
