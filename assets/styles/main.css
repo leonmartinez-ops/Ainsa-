@@ -690,3 +690,31 @@ body.page-leaving main{opacity:.86;transform:translateY(-2px);transition:opacity
 .area-downloads{margin-top:40px}.area-downloads>h3{font-size:1.6rem}.supplier-downloads{margin-top:28px}.download-card{min-width:0;scroll-margin-top:110px}.download-card h3{overflow-wrap:anywhere}.download-card .eyebrow{font-size:.7rem;line-height:1.6;color:var(--graphite)}.download-card .download-meta{font-size:.8rem}.download-card .download-help{font-size:.8rem}.catalog-download-note{margin-top:28px;max-width:760px}.catalog-pending .btn{margin-bottom:8px}
 
 .section-white.area-directory>.shell,.section-white.catalog-library>.shell{display:block;width:var(--shell);margin-inline:auto}.catalog-library{padding-block:64px}.catalog-library .download-card .btn{padding:12px 16px;border:1px solid var(--ink);min-height:44px}.catalog-library{scroll-margin-top:90px}
+
+/* Products catalog cover: scoped to this page, retaining AINSA's palette. */
+.catalog-explore-hero{position:relative;isolation:isolate;overflow:hidden;background:#10202d;color:#fff;padding-top:88px;min-height:650px;display:flex;align-items:center}
+.catalog-explore-image{position:absolute;z-index:-1;top:0;right:0;bottom:0;width:58%}
+.catalog-explore-image img{width:100%;height:100%;object-fit:cover;object-position:60% center}
+.catalog-explore-image::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#10202d 0%,rgba(16,32,45,.55) 28%,rgba(16,32,45,.08) 68%),linear-gradient(0deg,rgba(16,32,45,.5),transparent 60%)}
+.catalog-explore-content{padding-block:64px 80px;position:relative}
+.catalog-explore-copy{width:min(55%,660px)}
+.catalog-explore-copy .eyebrow{color:#ffc078;margin-bottom:24px}
+.catalog-explore-copy h1{font-size:clamp(3rem,4.8vw,5.25rem);line-height:1.02;letter-spacing:-.045em;margin:0 0 28px;text-wrap:balance}
+.catalog-explore-copy h1 span{color:#ffc078}
+.catalog-explore-copy .lead{color:#d7dfe5;max-width:410px;font-size:1.1rem;line-height:1.55;margin-bottom:32px}
+.catalog-explore-cta{min-height:52px;padding-inline:26px;font-size:.76rem;gap:26px}
+.catalog-explore-cta span{font-size:1.25rem;font-weight:400}
+#catalogos-por-area{scroll-margin-top:88px}
+@media(max-width:760px){
+ .catalog-explore-hero{padding-top:72px;min-height:0;display:block}
+ .catalog-explore-image{top:72px;width:100%;height:250px;bottom:auto}
+ .catalog-explore-image img{object-position:63% 55%}
+ .catalog-explore-image::after{background:linear-gradient(0deg,#10202d 0%,rgba(16,32,45,.1) 75%),linear-gradient(90deg,rgba(16,32,45,.3),transparent)}
+ .catalog-explore-content{padding-top:214px;padding-bottom:42px}
+ .catalog-explore-copy{width:100%;max-width:540px}
+ .catalog-explore-copy .eyebrow{margin-bottom:16px;font-size:.65rem}
+ .catalog-explore-copy h1{font-size:clamp(2.45rem,10.2vw,3.65rem);line-height:1.04;margin-bottom:20px;max-width:500px}
+ .catalog-explore-copy .lead{font-size:1rem;max-width:340px;margin-bottom:24px}
+ .catalog-explore-cta{width:100%;max-width:340px;justify-content:space-between;min-height:50px}
+ #catalogos-por-area{scroll-margin-top:72px}
+}
