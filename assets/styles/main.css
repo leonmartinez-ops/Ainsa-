@@ -23,26 +23,19 @@
 .ainsa-manual-icon{fill:none!important;stroke:currentColor!important;stroke-width:2.6!important;stroke-linecap:round;stroke-linejoin:round}.product-icon.ainsa-manual-icon{color:var(--orange)}.material-card .ainsa-manual-icon,.value-list .ainsa-manual-icon{color:var(--orange)}
 
 
-/* Premium inter-page transition — restrained, fast, mobile-safe */
-body::before{content:"";position:fixed;z-index:9998;inset:0;pointer-events:none;background:linear-gradient(118deg,var(--ink) 0%,#234a82 48%,var(--orange) 100%);transform:scaleY(0);transform-origin:bottom;transition:transform .52s cubic-bezier(.76,0,.24,1)}
-body.page-ready main,body.page-ready [data-site-footer]{opacity:0;transform:translateY(10px)}
-body.page-entered main,body.page-entered [data-site-footer]{opacity:1;transform:none;transition:opacity .58s ease,transform .7s cubic-bezier(.16,1,.3,1)}
-body.page-leaving::before{transform:scaleY(1);transform-origin:bottom}
-body.page-leaving main{opacity:.72;transform:translateY(-7px);transition:opacity .3s ease,transform .36s cubic-bezier(.4,0,1,1)}
-body.page-leaving .site-header{opacity:.88;transition:opacity .28s ease}
-@media(max-width:780px){body::before{transition-duration:.44s}body.page-ready main,body.page-ready [data-site-footer]{transform:translateY(7px)}body.page-leaving main{transform:translateY(-4px)}}
-@media(prefers-reduced-motion:reduce){body::before{display:none!important}body.page-ready main,body.page-ready [data-site-footer]{opacity:1!important;transform:none!important}}
-
-
-/* Softer inter-page transition refinement */
-body::before{opacity:0;transform:translate3d(0,100%,0);transition:transform .72s cubic-bezier(.22,1,.36,1),opacity .32s ease;will-change:transform,opacity}
-body.page-entered::before{opacity:0}
-body.page-leaving::before{opacity:.94;transform:translate3d(0,0,0)}
-body.page-ready main,body.page-ready [data-site-footer]{opacity:0;transform:translateY(5px)}
-body.page-entered main,body.page-entered [data-site-footer]{opacity:1;transform:none;transition:opacity .78s cubic-bezier(.22,1,.36,1),transform .82s cubic-bezier(.22,1,.36,1)}
-body.page-leaving main{opacity:.86;transform:translateY(-2px);transition:opacity .42s ease,transform .55s cubic-bezier(.22,1,.36,1)}
-@media(max-width:780px){body::before{transition:transform .62s cubic-bezier(.22,1,.36,1),opacity .28s ease}body.page-ready main,body.page-ready [data-site-footer]{transform:translateY(3px)}body.page-leaving main{transform:none;opacity:.9}}
-
+/* Native document dissolve: the outgoing page stays visible beneath the incoming one. */
+@view-transition{navigation:auto}
+::view-transition{pointer-events:none}
+::view-transition-group(root){animation:none}
+::view-transition-image-pair(root){isolation:isolate}
+::view-transition-old(root){animation:none;opacity:1;mix-blend-mode:normal}
+::view-transition-new(root){animation:ainsa-page-dissolve .32s ease-out both;mix-blend-mode:normal}
+@keyframes ainsa-page-dissolve{from{opacity:0}to{opacity:1}}
+@media(prefers-reduced-motion:reduce){
+ @view-transition{navigation:none}
+ ::view-transition-old(root),::view-transition-new(root){animation:none!important}
+}
+/* Unsupported browsers keep ordinary navigation; content is never hidden by JS. */
 
 /* Catalog cover refinement — straight, centered, editorial */
 .catalog-visual{display:grid;place-items:center}
@@ -718,3 +711,14 @@ body.page-leaving main{opacity:.86;transform:translateY(-2px);transition:opacity
  .catalog-explore-cta{width:100%;max-width:340px;justify-content:space-between;min-height:50px}
  #catalogos-por-area{scroll-margin-top:72px}
 }
+
+/* Supplier identity and genuine document covers, derived only from permitted originals. */
+.download-card .supplier-logo-link{display:flex;align-items:center;min-height:76px;width:100%;order:-1}
+.download-card .supplier-logo{max-width:min(100%,230px);width:auto;height:64px;object-fit:contain;object-position:left center}
+.download-card .supplier-cover{display:flex;flex-direction:column;align-self:stretch;background:#f2f3f4;border:1px solid var(--line);overflow:hidden}
+.download-card .supplier-cover img{height:250px;max-width:none;width:100%;object-fit:contain;object-position:center;padding:16px;transition:transform .2s ease}
+.download-card .supplier-cover:hover img{transform:scale(1.025)}
+.download-card .supplier-cover>span{padding:12px 16px;background:#10202d;color:white;font-size:.75rem;font-weight:800;letter-spacing:.04em}
+.download-card .supplier-original{width:100%;min-height:250px;display:flex;flex-direction:column;justify-content:center;gap:16px;padding:24px;background:#f2f3f4;border:1px solid var(--line)}
+.supplier-original>span{font-size:.85rem;color:var(--graphite)}.supplier-original>strong{font-size:1rem}
+@media(max-width:600px){.download-card .supplier-cover img{height:275px}.download-card .supplier-logo-link{min-height:66px}.download-card .supplier-logo{height:58px}}
