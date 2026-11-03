@@ -11,8 +11,9 @@ assert(css.includes('::view-transition{pointer-events:none}'),'Transition does n
 assert(!js.includes('event.preventDefault()'),'Navigation remains native');
 for(const file of ['index.html','productos/index.html','catalogo/index.html','nosotros/index.html','contacto/index.html','productos/ptr-cuadrado/index.html']){
  const page=fs.readFileSync(file,'utf8');
- assert(page.includes('main.css?v=crossfade-20261102'),`CSS cache version: ${file}`);
- assert(page.includes('app.js?v=crossfade-20261102'),`JS cache version: ${file}`);
+ const version=file==='index.html' ? 'logos-20261103' : 'crossfade-20261102';
+ assert(page.includes(`main.css?v=${version}`),`CSS cache version: ${file}`);
+ assert(page.includes(`app.js?v=${version}`),`JS cache version: ${file}`);
  assert(page.includes('defer blocking="render"'),'Header ready for incoming capture');
 }
 const catalog=fs.readFileSync('catalogo/index.html','utf8');

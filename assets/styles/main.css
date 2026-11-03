@@ -722,3 +722,21 @@
 .download-card .supplier-original{width:100%;min-height:250px;display:flex;flex-direction:column;justify-content:center;gap:16px;padding:24px;background:#f2f3f4;border:1px solid var(--line)}
 .supplier-original>span{font-size:.85rem;color:var(--graphite)}.supplier-original>strong{font-size:1rem}
 @media(max-width:600px){.download-card .supplier-cover img{height:275px}.download-card .supplier-logo-link{min-height:66px}.download-card .supplier-logo{height:58px}}
+
+/* Reveal the full supplier mosaic on slide 02 while keeping slider controls available. */
+.hero-copy{opacity:1;visibility:visible;transition:opacity .35s ease,visibility .35s ease}
+.hero.is-logo-slide .hero-copy{opacity:0;visibility:hidden;pointer-events:none}
+.hero-logo-collage{justify-content:center!important;padding:100px 30px 80px!important}
+.hero-logo-grid{width:min(1050px,88vw)!important;height:min(100%,520px)!important;max-height:100%!important;grid-template-columns:repeat(5,minmax(0,1fr))!important;grid-template-rows:repeat(4,minmax(0,1fr))!important}
+.hero-logo-grid img{height:100%!important;min-height:0;max-height:100%!important;padding:12px!important}
+.hero-logo-grid img:nth-child(17){grid-column:auto!important}
+.hero.is-logo-slide::after{opacity:0;pointer-events:none}
+.hero.is-logo-slide .hero-progress{position:absolute;left:0;bottom:28px;margin:0}
+@media(max-width:760px){
+ .hero-logo-collage{padding:76px 18px 58px!important}
+ .hero-logo-grid{width:min(94vw,550px)!important;height:100%!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;grid-template-rows:repeat(5,minmax(0,1fr))!important}
+ .hero-logo-grid img{padding:5px!important}
+ .hero-logo-grid img:nth-child(17){grid-column:2 / span 2!important}
+ .hero.is-logo-slide .hero-progress{left:0;bottom:15px}
+}
+@media(prefers-reduced-motion:reduce){.hero-copy{transition:none}}

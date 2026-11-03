@@ -108,12 +108,19 @@ filterButtons.forEach(button => button.addEventListener('click', () => {
   if (!hero) return;
   const slides = Array.from(hero.querySelectorAll('[data-hero-slide]'));
   const dots = Array.from(hero.querySelectorAll('[data-hero-dot]'));
+  const copy = hero.querySelector('.hero-copy');
   if (slides.length < 2) return;
   let active = 0;
   let timer = null;
   const show = (index) => {
     active = (index + slides.length) % slides.length;
     slides.forEach((slide, i) => slide.classList.toggle('is-active', i === active));
+    const showingLogos = slides[active].classList.contains('hero-logo-collage');
+    hero.classList.toggle('is-logo-slide', showingLogos);
+    if (copy) {
+      copy.inert = showingLogos;
+      copy.setAttribute('aria-hidden', String(showingLogos));
+    }
     dots.forEach((dot, i) => {
       dot.classList.toggle('is-active', i === active);
       dot.setAttribute('aria-current', i === active ? 'true' : 'false');
