@@ -740,3 +740,9 @@
  .hero.is-logo-slide .hero-progress{left:0;bottom:15px}
 }
 @media(prefers-reduced-motion:reduce){.hero-copy{transition:none}}
+
+/* User-supplied catalog cover screenshot, framed without browser chrome. */
+.download-card .chulavista-preview{height:250px;position:relative;overflow:hidden;background:#f2f3f4}
+.download-card .supplier-cover .chulavista-preview img{position:absolute;height:136.05%;width:auto;max-width:none;padding:0;left:50%;top:-14.61%;transform:translateX(-50%);object-fit:initial}
+.download-card .chulavista-cover:hover img{transform:translateX(-50%) scale(1.025)}
+@media(max-width:600px){.download-card .chulavista-preview{height:275px}}

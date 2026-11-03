@@ -11,9 +11,10 @@ assert(css.includes('::view-transition{pointer-events:none}'),'Transition does n
 assert(!js.includes('event.preventDefault()'),'Navigation remains native');
 for(const file of ['index.html','productos/index.html','catalogo/index.html','nosotros/index.html','contacto/index.html','productos/ptr-cuadrado/index.html']){
  const page=fs.readFileSync(file,'utf8');
- const version=file==='index.html' ? 'logos-20261103' : 'crossfade-20261102';
- assert(page.includes(`main.css?v=${version}`),`CSS cache version: ${file}`);
- assert(page.includes(`app.js?v=${version}`),`JS cache version: ${file}`);
+ const cssVersion=file==='index.html' ? 'logos-20261103' : file==='catalogo/index.html' ? 'chulavista-20261103' : 'crossfade-20261102';
+ const jsVersion=file==='index.html' ? 'logos-20261103' : 'crossfade-20261102';
+ assert(page.includes(`main.css?v=${cssVersion}`),`CSS cache version: ${file}`);
+ assert(page.includes(`app.js?v=${jsVersion}`),`JS cache version: ${file}`);
  assert(page.includes('defer blocking="render"'),'Header ready for incoming capture');
 }
 const catalog=fs.readFileSync('catalogo/index.html','utf8');
@@ -23,6 +24,7 @@ for(const slug of ['serviacero-electroforjados','integrinox-2026','aceros-innova
   assert(fs.statSync(path).size>100);assert(catalog.includes(path));
  }
 }
-assert(!catalog.includes('chulavista-cover'),'No derivative of protected PDF');
-assert.equal((catalog.match(/class="supplier-cover"/g)||[]).length,6);
-console.log('OK: native crossfade, reduced-motion opt-out, cache versions, six genuine logo/cover pairs.');
+assert(catalog.includes('chulavista-captura.jpeg'),'User-supplied cover screenshot is linked');
+assert(fs.statSync('assets/catalogo/portadas/chulavista-captura.jpeg').size>100);
+assert.equal((catalog.match(/class="supplier-cover(?: chulavista-cover)?"/g)||[]).length,7);
+console.log('OK: native crossfade, reduced-motion opt-out, cache versions, six logo/cover pairs plus user-supplied Chulavista cover.');
